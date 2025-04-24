@@ -4,17 +4,19 @@ package ec.edu.ups.poo.Models.Enums;
 
 public enum Feriado {
 
-    FERIADO_NAVIDAD(Month.DECEMBER, 25),
-    NO_FERIADO(null,0),
-    AÑO_NUEVO(Month.JANUARY, 1),
-    FERIADO_FIESTAS_DE_CUENCA(Month.APRIL, 12);
+    FERIADO_NAVIDAD(Month.DECEMBER, 25,0.08),
+    NO_FERIADO(null,0,0.15),
+    AÑO_NUEVO(Month.JANUARY, 1,0.1),
+    FIESTAS_DE_CUENCA(Month.APRIL, 12,0.12);
 
     private Month mes;
     private int dia;
+    private double porcentaje;
 
-    Feriado(Month mes, int dia) {
+    Feriado(Month mes, int dia, double porcentaje) {
         this.mes = mes;
         this.dia = dia;
+        this.porcentaje = porcentaje;
     }
 
     public int getDia() {
@@ -26,6 +28,12 @@ public enum Feriado {
     }
 
     public String getFecha(){
-        return mes+" "+dia;
+
+        if (this == NO_FERIADO) {
+            return "Día normal";
+        }
+        return mes + " " + dia;
     }
+
+    public double getPorcentaje(){return porcentaje;}
 }

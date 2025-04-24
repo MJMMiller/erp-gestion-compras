@@ -15,4 +15,11 @@ public class SolicitudCompra implements Calculable {
     private EstadoSolicitud estado;
     private List<DetalleSolicitud> detalles;
 
+    @Override
+    public double calcularSubTotal(){
+        return 3.0;
+    }
+    public double calcularIva(){
+        return 4.0;
+    }
 }

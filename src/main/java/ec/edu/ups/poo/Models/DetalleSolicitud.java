@@ -11,4 +11,13 @@ public class DetalleSolicitud implements Calculable {
     private String observacion;
     private Double ivaPorProducto;
 
+    @Override
+    public double calcularSubTotal(){
+        System.out.println("Hla 1");
+        return 2.0;
+    }
+    public double calcularIva(){
+        System.out.printf("oli");
+        return 1.0;
+    }
 }
