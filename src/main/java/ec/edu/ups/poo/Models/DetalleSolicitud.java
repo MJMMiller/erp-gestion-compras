@@ -98,8 +98,7 @@ public class DetalleSolicitud implements Calculable {
     public void calcularSubTotal(){
         setSubTotalDetalle(itemProducto.getPrecioUnitario()*cantidad);
     }
-    public double calcularIva(){
+    public void calcularIva(){
         setIVAdetalle(itemProducto.calcularIVA()*cantidad);
-        return getIVAdetalle();
     }
 }
