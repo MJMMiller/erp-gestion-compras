@@ -6,12 +6,14 @@ public abstract class Producto {
 
     private int id;
     private String nombre;
-    private Double precio;
+    private Double precioUnitario;
+    private String marca;
 
-    public Producto(int id, String nombre, Double precio) {
+    public Producto(int id, String nombre, Double precioUnitario, String marca) {
         this.id = id;
         this.nombre = nombre;
-        this.precio = precio;
+        this.precioUnitario = precioUnitario;
+        this.marca = marca;
     }
 
     public int getId() {
@@ -30,19 +32,25 @@ public abstract class Producto {
         this.nombre = nombre;
     }
 
-    public Double getPrecio() {
-        return precio;
+
+    public Double getPrecioUnitario() {
+        return precioUnitario;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public void setPrecioUnitario(Double precioUnitario) {
+        this.precioUnitario = precioUnitario;
     }
+
+    public String getMarca() {return marca;}
+
+    public void setMarca(String marca) {this.marca = marca;}
 
     @Override
     public String toString() {
-        return "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", precio=" + precio + '\'' +" , ";
+        return "\n\t\t\t id=" + id +
+                " || nombre='" + nombre + '\'' +
+                " || precioUnitario=" + precioUnitario +
+                " || marca='" + marca + '\'';
     }
 
     @Override

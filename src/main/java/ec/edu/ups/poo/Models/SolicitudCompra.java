@@ -16,8 +16,8 @@ public class SolicitudCompra implements Calculable {
     private List<DetalleSolicitud> detalles;
 
     @Override
-    public double calcularSubTotal(){
-        return 3.0;
+    public void calcularSubTotal(){
+
     }
     public double calcularIva(){
         return 4.0;

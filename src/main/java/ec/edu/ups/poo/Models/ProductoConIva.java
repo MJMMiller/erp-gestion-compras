@@ -2,14 +2,11 @@ package ec.edu.ups.poo.Models;
 
 import ec.edu.ups.poo.Models.Enums.Feriado;
 
-import java.util.GregorianCalendar;
-
 public class ProductoConIva extends Producto {
     private Feriado festividad;
 
-    public ProductoConIva(int id, String nombre, Double precio, Feriado festividad) {
-        super(id, nombre, precio);
-
+    public ProductoConIva(int id, String nombre, Double precioUnitario, String marca, Feriado festividad) {
+        super(id, nombre, precioUnitario, marca);
         this.festividad = festividad;
     }
 
@@ -23,16 +20,16 @@ public class ProductoConIva extends Producto {
 
     @Override
     public String toString() {
-        return   "Producto Con IVA { " +
+        return   "\n\t\t\tProducto Con IVA { " +
                 super.toString() +
-                "porcentaje del IVA = " + festividad.getPorcentaje() +
-                " , motivo del porcentaje =  " + festividad.getFecha() +
-                " , impuesto =  " + calcularIVA() + " " +
+                " || porcentaje del IVA = " + festividad.getPorcentaje() +
+                " || impuesto =  " + calcularIVA() +
+                " || motivo del porcentaje =  " + festividad.getFecha() +
                 '}';
     }
 
     @Override
     double calcularIVA() {
-        return getPrecio()*festividad.getPorcentaje() ;
+        return getPrecioUnitario()*festividad.getPorcentaje() ;
     }
 }

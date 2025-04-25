@@ -5,8 +5,8 @@ import ec.edu.ups.poo.Models.Enums.Feriado;
 public class ProductoSinIva extends  Producto {
     private String motivo;
 
-    public ProductoSinIva(int id, String nombre, Double precio, String motivo) {
-        super(id, nombre, precio);
+    public ProductoSinIva(int id, String nombre, Double precioUnitario, String marca, String motivo) {
+        super(id, nombre, precioUnitario, marca);
         this.motivo = motivo;
     }
 
@@ -20,10 +20,10 @@ public class ProductoSinIva extends  Producto {
 
     @Override
     public String toString() {
-        return "Producto Sin IVA {" +
+        return "\n\t\t\tProducto Sin IVA {" +
                 super.toString() +
-                "porcantajeIVA= " + calcularIVA() +
-                " , motivo='" + motivo + '\'' +
+                " || porcantajeIVA= " + calcularIVA() +
+                " || motivo='" + motivo + '\'' +
                 '}';
     }
 }
