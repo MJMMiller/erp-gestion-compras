@@ -1,4 +1,5 @@
 package ec.edu.ups.poo;
+import ec.edu.ups.poo.Controllers.ControlProvedor;
 import ec.edu.ups.poo.Models.*;
 import ec.edu.ups.poo.Models.Enums.EstadoSolicitud;
 import ec.edu.ups.poo.Models.Enums.Feriado;
@@ -11,7 +12,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
         Departamento departamento = new Departamento("Sistemas");
         Departamento departamento2 = new Departamento("Adminsitrativo");
 
@@ -21,15 +21,14 @@ public class Main {
         ProductoConIva producto1 = new ProductoConIva(01, "Computadora",  500.0,"ASUS", Feriado.NO_FERIADO);
         ProductoSinIva producto2 = new ProductoSinIva(02,"Sal",2.0,"Mi Sal Querida", "El producto no agraba iva");
 
-        Provedor provedor = new Provedor("0105236525","Juan","Perez","095 542 6252","Av de las Americas","juanperez@gmail.com");
-        provedor.addProducto(producto1);
-
-
+        ControlProvedor cP = new ControlProvedor();
+        cP.getProveedores().get(0).addProducto(producto1);
 
         GregorianCalendar fecha = new GregorianCalendar(2018, Calendar.JUNE, 15);
         SolicitudCompra solicitud1 = new SolicitudCompra(001,fecha,"Compras pendientes",empleado, EstadoSolicitud.SOLICITADA);
         solicitud1.addDetalle(01, producto1, 5, "---Sin Observaciones---");
         solicitud1.addDetalle(02, producto2, 5, "Es marina");
         System.out.println(solicitud1);
+
     }
 }
