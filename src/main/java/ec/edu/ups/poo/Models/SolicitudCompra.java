@@ -4,6 +4,7 @@ import ec.edu.ups.poo.Models.Enums.EstadoSolicitud;
 import ec.edu.ups.poo.Models.Interface.Calculable;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +16,19 @@ public class SolicitudCompra implements Calculable {
     private String comentario;
     private Empleado empleadoSolicitante;
     private EstadoSolicitud estado;
-    private List<DetalleSolicitud> detalles;
+    private List<DetalleSolicitud> detalles = new ArrayList<>();
     private double subtotal;
     private double iva;
     private double total;
 
-    public SolicitudCompra(int id, GregorianCalendar fecha, String comentario, Empleado empleadoSolicitante, EstadoSolicitud estado, List<DetalleSolicitud> detalles) {
+    public SolicitudCompra(int id, GregorianCalendar fecha, String comentario, Empleado empleadoSolicitante, EstadoSolicitud estado) {
         this.id = id;
         this.fecha = fecha;
         this.comentario = comentario;
         this.empleadoSolicitante = empleadoSolicitante;
         this.estado = estado;
-        this.detalles = detalles;
-        calcularIva();
-        calcularSubTotal();
     }
+
 
     public double getTotal() {
         return total;
@@ -55,13 +54,13 @@ public class SolicitudCompra implements Calculable {
         this.subtotal = subtotal;
     }
 
-    public List<DetalleSolicitud> getDetalles() {
-        return detalles;
+    public void addDetalle(int id, Producto itemProducto, int cantidad, String observacion) {
+        detalles.add(new DetalleSolicitud(id, itemProducto, cantidad, observacion));
+        calcularIva();
+        calcularSubTotal();
     }
 
-    public void setDetalles(List<DetalleSolicitud> detalles) {
-        this.detalles = detalles;
-    }
+
 
     public EstadoSolicitud getEstado() {
         return estado;

@@ -1,11 +1,17 @@
 package ec.edu.ups.poo.Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Departamento {
 
     private String name;
     private List<Empleado> empleados;
+
+    public Departamento( String name) {
+        this.empleados = new ArrayList<>();
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -19,15 +25,15 @@ public class Departamento {
         return empleados;
     }
 
-    public void setEmpleados(List<Empleado> empleados) {
-        this.empleados = empleados;
+    public void addEmpleados (Empleado empleado){
+        this.empleados.add(empleado);
     }
 
     @Override
     public String toString() {
         return "Departamento{" +
-                "name='" + name + '\'' +
-                ", empleados=" + empleados +
+                " name='" + name + '\'' +
+                " empleados=" + empleados +
                 '}';
     }
 }

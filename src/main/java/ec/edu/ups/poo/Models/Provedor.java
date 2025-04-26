@@ -1,5 +1,6 @@
 package ec.edu.ups.poo.Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Provedor extends Persona{
@@ -8,14 +9,15 @@ public class Provedor extends Persona{
 
     public Provedor(String cedula, String nombre, String apellido, String telefono, String direccion, String correo) {
         super(cedula, nombre, apellido, telefono, direccion, correo);
+        this.productos = new ArrayList<>();
     }
 
     public List<Producto> getProductos() {
         return productos;
     }
 
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
+    public void addProducto(Producto producto) {
+        this.productos.add(producto);
     }
 
     @Override
