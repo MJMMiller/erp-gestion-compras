@@ -8,7 +8,6 @@ public abstract class Producto {
     private String nombre;
     private Double precioUnitario;
     private String marca;
-    private Provedor provedor;
 
     public Producto(int id, String nombre, Double precioUnitario, String marca) {
         this.id = id;

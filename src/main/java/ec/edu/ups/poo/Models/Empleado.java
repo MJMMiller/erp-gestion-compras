@@ -52,10 +52,9 @@ public class Empleado extends Persona{
     @Override
     public String toString() {
         return "Empleado{" +
-                "departamento=" + departamento +
-                ", cargo=" + cargo +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+                super.toString() +
+                "\n\t\t\t\t\t|| departamento=" + departamento.getName() +
+                " || cargo=" + cargo +
+                " ||username='" + username + '\'' + " ||";
     }
 }

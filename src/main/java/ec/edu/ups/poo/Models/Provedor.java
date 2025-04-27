@@ -23,6 +23,7 @@ public class Provedor extends Persona{
     @Override
     public String toString() {
         return "Provedor{" +
+                super.toString() +
                 "productos=" + productos +
                 '}';
     }
