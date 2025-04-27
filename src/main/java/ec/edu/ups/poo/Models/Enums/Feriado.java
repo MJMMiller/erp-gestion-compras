@@ -36,4 +36,13 @@ public enum Feriado {
     }
 
     public double getPorcentaje(){return porcentaje;}
+
+    public static Feriado obtenerFeriado(Month mes, int dia) {
+        for (Feriado feriado : Feriado.values()) {
+            if (feriado.getMes() != null && feriado.getMes().equals(mes) && feriado.getDia() == dia) {
+                return feriado;
+            }
+        }
+        return NO_FERIADO;
+    }
 }
