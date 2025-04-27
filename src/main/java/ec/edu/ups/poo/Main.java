@@ -1,5 +1,9 @@
 package ec.edu.ups.poo;
+import ec.edu.ups.poo.Controllers.ControlProducto;
 import ec.edu.ups.poo.Controllers.ControlProvedor;
+import ec.edu.ups.poo.Controllers.ControlSolicitud;
+import ec.edu.ups.poo.Views.ViewConsole;
+
 import ec.edu.ups.poo.Models.*;
 import ec.edu.ups.poo.Models.Enums.EstadoSolicitud;
 import ec.edu.ups.poo.Models.Enums.Feriado;

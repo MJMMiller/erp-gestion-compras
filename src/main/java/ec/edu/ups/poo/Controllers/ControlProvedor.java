@@ -1,14 +1,14 @@
 package ec.edu.ups.poo.Controllers;
 
-import ec.edu.ups.poo.Models.Empleado;
-import ec.edu.ups.poo.Models.Enums.Rol;
-import ec.edu.ups.poo.Models.Departamento;
 import ec.edu.ups.poo.Models.Provedor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ControlProvedor {
+    Scanner sc = new Scanner(System.in);
+
     private List<Provedor> provedores;
 
     public ControlProvedor() {
@@ -29,8 +29,7 @@ public class ControlProvedor {
     }
 
     public void agregarProveedor() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese la camtidad de proveedores a registrar: ");
+        System.out.print("Ingrese la cantidad de proveedores a registrar: ");
         int numeroProvedores = sc.nextInt();
 
         for (int i = 0; i < numeroProvedores; i++){
@@ -54,11 +53,33 @@ public class ControlProvedor {
 
     }
 
-    public void listarProveedores() {
+    public void printProvedores() {
         System.out.println("Lista de provedores: ");
         for (Provedor provedor : provedores) {
             System.out.println("\t"+provedor);
         }
         System.out.println("---------------------------------------------");
+    }
+
+    public void buscarProvedorPorID(String id) {
+        for (Provedor prov : provedores) {
+            if (prov.getCedula().equals(id)) {
+                System.out.println("Proveedor encontrado: " + "\n" +prov);
+                System.out.println("---------------------------------------------");
+                return;
+            }
+        }
+        System.out.println("Proveedor no encontrado.");
+    }
+
+    public void buscarProvedorPorNombre(String nombre) {
+        for (Provedor prov : provedores) {
+            if (prov.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println("Proveedor encontrado: " + "\n" +prov);
+                System.out.println("---------------------------------------------");
+                return;
+            }
+        }
+        System.out.println("Proveedor no encontrado.");
     }
 }
