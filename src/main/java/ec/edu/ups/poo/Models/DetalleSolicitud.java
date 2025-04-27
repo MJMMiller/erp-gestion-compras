@@ -72,14 +72,14 @@ public class DetalleSolicitud implements Calculable {
 
     @Override
     public String toString() {
-        return "\n\t\tDetalleSolicitud{" +
-                "\n\t\t id=" + id +
-                "\n\t\t cantidad=" + cantidad +
-                "\n\t\t observacion='" + observacion + '\'' +
-                "\n\t\t IVA detalle=" + IVAdetalle +
-                "\n\t\t SubTotal=" + SubTotalDetalle +
-                "\n\t\t Producto=" + itemProducto +
-                '}';
+        return "\n\t\t\t\t\tDetalleSolicitud{" +
+                "\n\t\t\t\t\t\t|| id=" + id +
+                "\t|| cantidad=" + cantidad +
+                " || observacion='" + observacion + '\'' +
+                " || IVA detalle=" + IVAdetalle +
+                " || SubTotal=" + SubTotalDetalle + " ||" +
+                "\n\t\t\t\t\t\t----------------------------------------------------------------------------------------------------------"+
+                "\n\t\t\t\t\t\t|| Producto=" + itemProducto;
     }
 
     @Override

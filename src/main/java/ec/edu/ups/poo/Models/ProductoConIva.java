@@ -20,12 +20,12 @@ public class ProductoConIva extends Producto {
 
     @Override
     public String toString() {
-        return   "\n\t\t\tProducto Con IVA { " +
+        return   "\n\t\t\t\t\t\t\t\tProducto Con IVA { " +
                 super.toString() +
                 " || porcentaje del IVA = " + festividad.getPorcentaje() +
                 " || impuesto =  " + calcularIVA() +
-                " || motivo del porcentaje =  " + festividad.getFecha() +
-                '}';
+                " || motivo del porcentaje =  " + festividad.getFecha() + " ||"+
+                "\n\t\t\t\t\t\t----------------------------------------------------------------------------------------------------------";
     }
 
     @Override

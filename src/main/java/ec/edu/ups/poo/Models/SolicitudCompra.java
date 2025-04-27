@@ -106,16 +106,19 @@ public class SolicitudCompra implements Calculable {
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return "SolicitudCompra{" +
-                "\n\t id=" + id +
-                "\n\t fecha=" + sdf.format(fecha.getTime()) +
-                "\n\t comentario='" + comentario + '\'' +
-                "\n\t empleadoSolicitante=" + empleadoSolicitante +
-                "\n\t estado=" + estado +
-                "\n\t detalles=" + detalles +
-                "\n\t subtotal=" + subtotal +
-                "\n\t iva=" + iva +
-                "\n\t total=" + total +
-                '}';
+                "\n\t\t|| id=" + id +
+                "\t|| fecha=" + sdf.format(fecha.getTime()) +
+                "\t|| comentario='" + comentario + '\'' +
+                "\t|| estado=" + estado + " ||" +
+                "\n\t\t----------------------------------------------------------------------------------------------"+
+                "\n\t\t|| empleadoSolicitante=" + empleadoSolicitante +
+                "\n\t\t----------------------------------------------------------------------------------------------"+
+                "\n\t\t|| detalles=" + detalles +
+                "\n----------------------------------------------------------------------------------------------------------------------------------------------------------------"+
+                "\n\t|| subtotal=" + subtotal +
+                "\n\t|| iva=" + iva +
+                "\n\t|| total=" + total+
+                "\n----------------------------------------------------------------------------------------------------------------------------------------------------------------";
     }
 
     @Override
