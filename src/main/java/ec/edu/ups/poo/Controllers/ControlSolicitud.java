@@ -1,19 +1,16 @@
 package ec.edu.ups.poo.Controllers;
 
-import ec.edu.ups.poo.Models.Departamento;
-import ec.edu.ups.poo.Models.Empleado;
+import ec.edu.ups.poo.Models.*;
 import ec.edu.ups.poo.Models.Enums.EstadoSolicitud;
+import ec.edu.ups.poo.Models.Enums.Feriado;
 import ec.edu.ups.poo.Models.Enums.Rol;
-import ec.edu.ups.poo.Models.SolicitudCompra;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 public class ControlSolicitud {
     private List<SolicitudCompra> solicitudes;
 
+    Scanner sc = new Scanner(System.in);
 
     public ControlSolicitud() {
         solicitudes = new ArrayList<>();
@@ -38,7 +35,38 @@ public class ControlSolicitud {
         return solicitudes.get(n-1);
     }
 
-    public void agregarSolicitud(SolicitudCompra nuevaSolicitud) {
-        solicitudes.add(nuevaSolicitud);
+    public void agregarSolicitud() {
+
+        Empleado empleado = new Empleado("0107456022","Nicolás","Cedillo","099 181 9287","Calle de la verbena","nicocedillo@gmail.com",departamento, Rol.EMPLEADOR,"nicolascedillo@gmail.com","nicolas1");
+
+
+        System.out.print("Ingrese la cantidad de solicitudes a registrar: ");
+        int numeroSolicitudes = sc.nextInt();
+
+        for (int i = 0; i < numeroSolicitudes; i++){
+
+            System.out.println("\t\tIngrese los datos de la solicitud " + (i+1) + ": ");
+            System.out.println("Ingrese el ID de la solicitud: ");
+            int idSolicitud = sc.nextInt();
+            System.out.println("Ingrese el año: ");
+            int año  = sc.nextInt();
+            System.out.println("Ingrese el mes ( del 1 al 12 ): ");
+            int mes = sc.nextInt() -1;
+            System.out.println("Ingrese el día: ");
+            int dia = sc.nextInt();
+            GregorianCalendar fecha = new GregorianCalendar(año, mes, dia);
+            System.out.println("Ingrese el comentario: ");
+            String comentario = sc.next();
+            solicitudes.add( new SolicitudCompra(idSolicitud,fecha,comentario,empleado,EstadoSolicitud.SOLICITADA));
+
+            System.out.println("Ingrese detalles de la solicitud: ");
+            boolean continuar = true;
+            while (continuar){
+
+            }
+
+            System.out.println("Solicitud registrada correctamente.");
+            System.out.println("---------------------------------------------");
+        }
     }
 }

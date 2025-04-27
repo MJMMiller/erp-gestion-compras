@@ -15,11 +15,22 @@ public class ControlProducto {
     public ControlProducto() {
         productos = new ArrayList<>();
 
-        ProductoConIva producto1 = new ProductoConIva(01, "Computadora",  500.0,"ASUS", Feriado.NO_FERIADO);
-        ProductoSinIva producto2 = new ProductoSinIva(02,"Sal",2.0,"Mi Sal Querida", "El producto no agraba iva");
-
+        ProductoConIva producto1 = new ProductoConIva(1, "Computadora",  500.0,"ASUS", Feriado.NO_FERIADO);
+        ProductoSinIva producto2 = new ProductoSinIva(2,"Sal",2.0,"Mi Sal Querida", "El producto no agraba iva");
+        ProductoConIva producto3 = new ProductoConIva(3, "Smartphone", 300.0, "Samsung", Feriado.NO_FERIADO);
+        ProductoConIva producto4 = new ProductoConIva(4, "Televisor", 800.0, "LG", Feriado.FERIADO_NAVIDAD);
+        ProductoSinIva producto5 = new ProductoSinIva(5, "Agua mineral", 1.5, "Agua Pura", "Producto exento de IVA");
+        ProductoSinIva producto6 = new ProductoSinIva(6, "Arroz", 1.2, "Grano de Oro", "No grava IVA según ley");
+        ProductoConIva producto7 = new ProductoConIva(7, "Impresora", 150.0, "HP", Feriado.NO_FERIADO);
+        ProductoSinIva producto8 = new ProductoSinIva(8, "Medicamento", 10.0, "SaludTotal", "Medicamento libre de IVA");
         productos.add(producto1);
         productos.add(producto2);
+        productos.add(producto3);
+        productos.add(producto4);
+        productos.add(producto5);
+        productos.add(producto6);
+        productos.add(producto7);
+        productos.add(producto8);
     }
 
     public Producto getProductos(int n) {

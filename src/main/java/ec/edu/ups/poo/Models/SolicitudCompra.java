@@ -61,7 +61,6 @@ public class SolicitudCompra implements Calculable {
     }
 
 
-
     public EstadoSolicitud getEstado() {
         return estado;
     }
