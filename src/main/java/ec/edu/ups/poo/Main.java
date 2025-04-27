@@ -22,7 +22,8 @@ public class Main {
         ProductoSinIva producto2 = new ProductoSinIva(02,"Sal",2.0,"Mi Sal Querida", "El producto no agraba iva");
 
         ControlProvedor cP = new ControlProvedor();
-        cP.getProveedores().get(0).addProducto(producto1);
+        cP.ControlProvedor();
+        cP.getProvedores().get(1).addProducto(producto1);
 
         GregorianCalendar fecha = new GregorianCalendar(2018, Calendar.JUNE, 15);
         SolicitudCompra solicitud1 = new SolicitudCompra(001,fecha,"Compras pendientes",empleado, EstadoSolicitud.SOLICITADA);
