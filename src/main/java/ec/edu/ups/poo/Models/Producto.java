@@ -2,12 +2,13 @@ package ec.edu.ups.poo.Models;
 
 import java.util.Objects;
 
-public abstract class Producto {
+public class Producto {
 
     private int id;
     private String nombre;
     private Double precioUnitario;
     private String marca;
+
 
     public Producto(int id, String nombre, Double precioUnitario, String marca) {
         this.id = id;
@@ -32,7 +33,6 @@ public abstract class Producto {
         this.nombre = nombre;
     }
 
-
     public Double getPrecioUnitario() {
         return precioUnitario;
     }
@@ -44,6 +44,8 @@ public abstract class Producto {
     public String getMarca() {return marca;}
 
     public void setMarca(String marca) {this.marca = marca;}
+
+
 
     @Override
     public String toString() {

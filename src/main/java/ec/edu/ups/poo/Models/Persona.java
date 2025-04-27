@@ -68,7 +68,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return  "\n\t\t\t\t\t|| cedula='" + cedula + '\'' +
+        return  "\n\t\t\t\t\t\t|| cedula='" + cedula + '\'' +
                 "|| nombre='" + nombre + '\'' +
                 "|| apellido='" + apellido + '\'' +
                 "|| telefono='" + telefono + '\'' +

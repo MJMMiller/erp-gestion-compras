@@ -107,7 +107,7 @@ public class SolicitudCompra implements Calculable {
         return "SolicitudCompra{" +
                 "\n\t\t|| id=" + id +
                 "\t|| fecha=" + sdf.format(fecha.getTime()) +
-                "\t|| comentario='" + comentario + '\'' +
+                "\t|| comentario=" + comentario +
                 "\t|| estado=" + estado + " ||" +
                 "\n\t\t----------------------------------------------------------------------------------------------"+
                 "\n\t\t|| empleadoSolicitante=" + empleadoSolicitante +
@@ -147,6 +147,5 @@ public class SolicitudCompra implements Calculable {
             sumaIVATotal += det.getIVAdetalle();
         }
         setIva(sumaIVATotal);
-
     }
 }

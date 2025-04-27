@@ -1,5 +1,6 @@
 package ec.edu.ups.poo.Controllers;
 
+import ec.edu.ups.poo.Models.Producto;
 import ec.edu.ups.poo.Models.Provedor;
 
 import java.util.ArrayList;
@@ -10,6 +11,8 @@ public class ControlProvedor {
     Scanner sc = new Scanner(System.in);
 
     private List<Provedor> provedores;
+
+    ControlProducto cPro = new ControlProducto();
 
     public ControlProvedor() {
 
@@ -32,6 +35,17 @@ public class ControlProvedor {
         provedores.add(provedor6);
         provedores.add(provedor7);
         provedores.add(provedor8);
+
+
+        provedor.addProducto(cPro.getProducto(1));
+        provedor2.addProducto(cPro.getProducto(2));
+        provedor3.addProducto(cPro.getProducto(3));
+        provedor4.addProducto(cPro.getProducto(4));
+        provedor5.addProducto(cPro.getProducto(5));
+        provedor6.addProducto(cPro.getProducto(6));
+        provedor7.addProducto(cPro.getProducto(7));
+        provedor8.addProducto(cPro.getProducto(8));
+
     }
 
     public Provedor getProvedores(int n) {
@@ -64,11 +78,13 @@ public class ControlProvedor {
     }
 
     public void printProvedores() {
-        System.out.println("Lista de provedores: ");
+
+       System.out.println("Lista de proveedores: ");
         for (Provedor provedor : provedores) {
-            System.out.println("\t"+provedor);
+            System.out.println("\t" + provedor);
+
+            System.out.println("---------------------------------------------");
         }
-        System.out.println("---------------------------------------------");
     }
 
     public void buscarProvedorPorID(String id) {
@@ -92,4 +108,14 @@ public class ControlProvedor {
         }
         System.out.println("Proveedor no encontrado.");
     }
+
+    public Provedor buscarProveedorPorCedula(String cedula) {
+        for (Provedor prov : provedores) {
+            if (prov.getCedula().equals(cedula)) {
+                return prov;
+            }
+        }
+        return null;
+    }
+
 }
