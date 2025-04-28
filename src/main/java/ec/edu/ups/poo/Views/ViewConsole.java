@@ -9,12 +9,11 @@ import ec.edu.ups.poo.Models.Enums.Rol;
 import java.util.Scanner;
 
 public class ViewConsole {
-
-    Scanner sc = new Scanner(System.in);
     private Empleado empleadoLogueado;
 
-    ControlProducto cPro = new ControlProducto();
+    Scanner sc = new Scanner(System.in);
     ControlProvedor cP = new ControlProvedor();
+    ControlProducto cPro = new ControlProducto();
     ControlSolicitud cSol = new ControlSolicitud();
 
     public void login() {
@@ -43,7 +42,6 @@ public class ViewConsole {
     }
 
     public String[] ingresarCredenciales() {
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("===== BIENVENIDO AL SISTEMA ERP =====");
         System.out.print("Ingrese su nombre de usuario: ");
@@ -264,7 +262,7 @@ public class ViewConsole {
         System.out.print("Ingrese el ID de la solicitud a buscar: ");
         int idSolicitud = sc.nextInt();
         cSol.buscarSolicitudPorID(idSolicitud);
-        sc.nextLine(); // Limpiar el buffer
+        sc.nextLine();
     }
 
     public void buscarSolicitudPorEstado() {
@@ -276,7 +274,7 @@ public class ViewConsole {
     public void cambiarEstadoSolicitud() {
         System.out.print("Seleccione el ID de la solicitud a cambiar estado: ");
         int idSolicitudCambio = sc.nextInt();
-        sc.nextLine(); // Limpiar el buffer
+        sc.nextLine();
         System.out.print("Ingrese el estado a cambiar la solicitud (SOLICITADA / EN_REVISION / APROVADA / RECHAZADA): ");
         String estadoSolicitudCambio = sc.nextLine();
         cSol.cambiarEstadoSolicitud(idSolicitudCambio, estadoSolicitudCambio);
