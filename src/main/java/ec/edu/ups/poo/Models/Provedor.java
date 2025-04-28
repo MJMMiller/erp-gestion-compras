@@ -20,7 +20,6 @@ public class Provedor extends Persona{
         this.productos.add(producto);
     }
 
-
     @Override
     public String toString() {
         return "Provedor{" +

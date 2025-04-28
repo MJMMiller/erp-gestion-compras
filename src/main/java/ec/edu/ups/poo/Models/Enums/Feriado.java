@@ -6,7 +6,7 @@ public enum Feriado {
 
     FERIADO_NAVIDAD(Month.DECEMBER, 25,0.08),
     NO_FERIADO(null,0,0.15),
-    AÑO_NUEVO(Month.JANUARY, 1,0.1),
+    ANIO_NUEVO(Month.JANUARY, 1,0.1),
     FIESTAS_DE_CUENCA(Month.APRIL, 12,0.12);
 
     private Month mes;

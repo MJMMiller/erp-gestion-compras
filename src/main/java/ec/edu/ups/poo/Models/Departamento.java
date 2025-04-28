@@ -25,10 +25,6 @@ public class Departamento {
         return empleados;
     }
 
-    public void addEmpleados (Empleado empleado){
-        this.empleados.add(empleado);
-    }
-
     @Override
     public String toString() {
         return "Departamento{" +
