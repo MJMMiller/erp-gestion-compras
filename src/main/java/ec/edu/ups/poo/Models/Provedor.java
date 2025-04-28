@@ -25,7 +25,7 @@ public class Provedor extends Persona{
     public String toString() {
         return "Provedor{" +
                 super.toString() +
-                "\n\t\t\t\tproductos=" + productos +
+                "\n\t\t\t\tproductos=" + getProductos() +
                 '}';
     }
 }
