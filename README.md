@@ -27,18 +27,41 @@ El sistema implementa diversos conceptos de la programación orientada a objetos
 ---
 
 ## 🧪 Estructura
-
-- `models/Proveedor.java`: Clase para representar a los proveedores con sus datos.
-- `models/Producto.java`: Clase que define los productos y sus atributos.
-- `models/SolicitudCompra.java`: Clase que representa una solicitud de compra, con el estado de la solicitud y los productos solicitados.
-- `interfaces/Calculable.java`: Interfaz que define el método para calcular el costo total de un objeto.
-- `enums/EstadoSolicitud.java`: Enum que define los posibles estados de una solicitud de compra.
-- `controllers/MenuController.java`: Controlador para gestionar la interacción con el menú y las operaciones del sistema.
-- `App.java`: Clase principal que ejecuta el menú y las operaciones de registro, listado, búsqueda y cálculo.
+```bash
+ec.edu.ups.poo/
+│    ├── Controllers/
+│    │   ├── ControlProductor.java
+│    │   ├── ControlProvider.java
+│    │   └── ControlSolicitud.java
+│    │
+│    ├── Models/
+│    │   ├── Enums/
+│    │   │   ├── EstadoSolicitud.java
+│    │   │   ├── Feriado.java
+│    │   │   └── Rol.java
+│    │   │
+│    │   └── Interface/
+│    │       └── Calculable.java
+│    │   │
+│    │   ├── Departamento.java
+│    │   ├── DetalleSolicitud.java
+│    │   ├── Empleado.java
+│    │   ├── Persona.java
+│    │   ├── Producto.java
+│    │   ├── ProductoConiva.java
+│    │   ├── ProductoSiniva.java
+│    │   ├── Provedor.java
+│    │   └── SolicitudCompra.java
+│    │
+│    └── Views/
+│        └── ViewConsole.java
+│
+└── Main.java
+```
 ---
 
 ## 🗂️ Diagrama
-![](https://github.com/MJMMiller/EST_DIAGRAMS/blob/66a5794679cd2d6c5091c71d91e92dd515abc2c3/icc-est-u1-OrdenamientoBusqueda01.03.png?raw=true)
+![](https://raw.githubusercontent.com/MJMMiller/POO_DIAGRAMS/refs/heads/main/TrabajoColaborativo.jpg)
 
 ---
 ## 🚀 Ejecución
@@ -57,25 +80,51 @@ Para ejecutar el proyecto:
 
 3. **Interacción a través del menú:**
 
-    El menú ofrecerá las siguientes opciones:
-    - Registrar proveedor
-    - Registrar producto
-    - Registrar solicitud de compra
-    - Listar proveedores
-    - Listar productos
-    - Listar solicitudes de compra
-    - Buscar proveedor por ID
-    - Buscar producto por nombre
-    - Buscar solicitud por ID
-    - Aprobar/Rechazar solicitud de compra
-    - Calcular total de una solicitud
-    - Salir
+## 🍔 Menú
+Este es un menu proporcioado acorde al rol, se asignaran diferentes funcionalidades: 
+
+    - Registrar Proveedor: Registrar un nuevo proveedor en el sistema.  
+    - Registrar Producto: Registrar un nuevo producto en el sistema.  
+    - Registrar Solicitud: Registrar una nueva solicitud de compra.  
+    - Listar Proveedores: Ver la lista de todos los proveedores.  
+    - Listar Productos: Ver la lista de todos los productos.  
+    - Listar Solicitudes de Compra: Ver las solicitudes de compra realizadas.  
+    - Buscar proveedor por ID: Buscar un proveedor específico por su ID.  
+    - Buscar proveedor por Nombre: Buscar un proveedor específico por su nombre.  
+    - Buscar producto por ID: Buscar un producto específico por su ID.  
+    - Buscar producto por Nombre: Buscar un producto específico por su nombre.  
+    - Buscar solicitud por ID: Buscar una solicitud específica por su ID.  
+    - Buscar solicitud por Estado: Buscar solicitudes según su estado.  
+    - Cambiar estado solicitud de compra: Cambiar el estado de una solicitud de compra.  
+    - Salir: Salir del menú.
 
 ---
 
 ## 🧑‍💻 Ejemplo de Salida
 
-
+```bash
+===== BIENVENIDO AL SISTEMA ERP =====
+Ingrese su nombre de usuario:
+Ingrese su contraseña:
+Acceso concedido: 
+---------------------------------------------
+===== SISTEMA DE GESTIÓN DE COMPRAS ERP ( ADMIN ) =====
+1.  Registrar Proveedor
+2.  Registrar Producto
+3.  Registrar Solicitud
+4.  Listar Proveedores
+5.  Listar Productos
+6.  Listar Solicitudes de Compra
+7.  Buscar proveedor por ID
+8.  Buscar proveedor por Nombre
+9.  Buscar producto por ID
+10. Buscar producto por Nombre
+11. Buscar solicitud por ID
+12. Buscar solicitud por Estado
+13. Cambiar estado solicitud de compra
+14. Salir
+Seleccione una opción:
+```
 ---
 
 ## 📚 Tecnologías Utilizadas
@@ -93,6 +142,6 @@ Para ejecutar el proyecto:
 
 ## 👥 Colaboradores
 
-- **Nicolas Cedillo - @ nicolascedillo**
-- **Mateo Miller - @MJMMiller**
+- **Nicolas Cedillo - [@nicolascedillo](https://github.com/nicolascedillo)**
+- **Mateo Miller - [@MJMMiller](https://github.com/MJMMiller)**
 
