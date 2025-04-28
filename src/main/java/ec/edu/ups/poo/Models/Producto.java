@@ -2,7 +2,7 @@ package ec.edu.ups.poo.Models;
 
 import java.util.Objects;
 
-public class Producto {
+public abstract class  Producto {
 
     private int id;
     private String nombre;

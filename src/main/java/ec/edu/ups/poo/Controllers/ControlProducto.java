@@ -27,14 +27,6 @@ public class ControlProducto {
         return productos.get(n-1);
     }
 
-
-    public Producto getProducto(int index) {
-        if (index >= 0 && index < productos.size()) {
-            return productos.get(index);
-        }
-        return null;
-    }
-
     public void agregarProducto() {
         System.out.print("Ingrese la cantidad de productos a registrar: ");
         int numeroProductos = sc.nextInt();

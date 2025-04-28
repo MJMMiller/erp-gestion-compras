@@ -17,7 +17,7 @@ public class SolicitudCompra implements Calculable {
     private Empleado empleadoSolicitante;
     private EstadoSolicitud estado;
     private List<DetalleSolicitud> detalles = new ArrayList<>();
-    private double subtotal;
+    private double subTotal;
     private double iva;
     private double total;
 
@@ -28,7 +28,6 @@ public class SolicitudCompra implements Calculable {
         this.empleadoSolicitante = empleadoSolicitante;
         this.estado = estado;
     }
-
 
     public double getTotal() {
         return total;
@@ -47,11 +46,11 @@ public class SolicitudCompra implements Calculable {
     }
 
     public double getSubtotal() {
-        return subtotal;
+        return subTotal;
     }
 
     public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
+        this.subTotal = subtotal;
     }
 
     public void addDetalle(int id, Producto itemProducto, int cantidad, String observacion) {
@@ -59,7 +58,6 @@ public class SolicitudCompra implements Calculable {
         calcularIva();
         calcularSubTotal();
     }
-
 
     public EstadoSolicitud getEstado() {
         return estado;
@@ -114,7 +112,7 @@ public class SolicitudCompra implements Calculable {
                 "\n\t\t----------------------------------------------------------------------------------------------"+
                 "\n\t\t|| detalles=" + detalles +
                 "\n----------------------------------------------------------------------------------------------------------------------------------------------------------------"+
-                "\n\t|| subtotal=" + subtotal +
+                "\n\t|| subtotal=" + subTotal +
                 "\n\t|| iva=" + iva +
                 "\n\t|| total=" + total+
                 "\n----------------------------------------------------------------------------------------------------------------------------------------------------------------";
@@ -139,8 +137,9 @@ public class SolicitudCompra implements Calculable {
             sumaSubtotal += det.getSubTotalDetalle();
         }
         setSubtotal(sumaSubtotal);
-        setTotal(subtotal + iva);
+        setTotal(subTotal + iva);
     }
+
     public void calcularIva(){
         double sumaIVATotal = 0;
         for (DetalleSolicitud det : detalles) {

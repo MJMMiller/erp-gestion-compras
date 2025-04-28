@@ -22,11 +22,11 @@ public class ControlProvedor {
 
         ProductoConIva producto1 = new ProductoConIva(1, "Computadora",  500.0,"ASUS", Feriado.NO_FERIADO);
         ProductoSinIva producto2 = new ProductoSinIva(2,"Sal",2.0,"Mi Sal Querida", "El producto no agraba iva");
-        ProductoConIva producto3 = new ProductoConIva(3, "Smartphone", 300.0, "Samsung", Feriado.NO_FERIADO);
-        ProductoConIva producto4 = new ProductoConIva(4, "Televisor", 800.0, "LG", Feriado.NO_FERIADO);
+        ProductoConIva producto3 = new ProductoConIva(3, "Smartphone", 300.0, "Samsung", Feriado.ANIO_NUEVO);
+        ProductoConIva producto4 = new ProductoConIva(4, "Televisor", 800.0, "LG", Feriado.FERIADO_NAVIDAD);
         ProductoSinIva producto5 = new ProductoSinIva(5, "Agua mineral", 1.5, "Agua Pura", "Productoexento de IVA");
         ProductoSinIva producto6 = new ProductoSinIva(6, "Arroz", 1.2, "Grano de Oro", "No grava IVA según ley");
-        ProductoConIva producto7 = new ProductoConIva(7, "Impresora", 150.0, "HP", Feriado.NO_FERIADO);
+        ProductoConIva producto7 = new ProductoConIva(7, "Impresora", 150.0, "HP", Feriado.FIESTAS_DE_CUENCA);
         ProductoSinIva producto8 = new ProductoSinIva(8, "Medicamento", 10.0, "SaludTotal", "Medicamento libre de IVA");
 
 
@@ -50,13 +50,13 @@ public class ControlProvedor {
 
 
         provedor.addProducto(producto1);
-        provedor.addProducto(producto2);
-        provedor.addProducto(producto3);
-        provedor.addProducto(producto4);
-        provedor.addProducto(producto5);
-        provedor.addProducto(producto6);
-        provedor.addProducto(producto7);
-        provedor.addProducto(producto8);
+        provedor2.addProducto(producto2);
+        provedor3.addProducto(producto3);
+        provedor4.addProducto(producto4);
+        provedor5.addProducto(producto5);
+        provedor6.addProducto(producto6);
+        provedor7.addProducto(producto7);
+        provedor8.addProducto(producto8);
 
         productosTemp.add(producto1);
         productosTemp.add(producto2);

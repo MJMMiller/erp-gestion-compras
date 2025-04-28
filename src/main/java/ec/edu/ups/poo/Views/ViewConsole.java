@@ -19,24 +19,43 @@ public class ViewConsole {
     public void login() {
 
         boolean accesoCorrecto = false;
+        System.out.println("===== BIENVENIDO AL SISTEMA ERP =====");
 
         while (!accesoCorrecto) {
+            System.out.println("1. Login");
+            System.out.println("2. Salir");
+            System.out.print("Seleccione una opción: ");
 
-            String[] credenciales = ingresarCredenciales();
-            String username = credenciales[0];
-            String password = credenciales[1];
+            String opcion = sc.nextLine();
 
-            if (username.equals("mateomiller1605@gmail.com") && password.equals("MJMMiller")) {
-                accesoAdministrativo();
-                accesoCorrecto = true;
+            switch (opcion) {
+                case "1":
+                    String[] credenciales = ingresarCredenciales();
+                    String username = credenciales[0];
+                    String password = credenciales[1];
 
-            } else if (username.equals("nicolascedillo@gmail.com") && password.equals("nicolas1")) {
-                accesoEmpleado();
-                accesoCorrecto = true;
+                    if (username.equals("mateomiller1605@gmail.com") && password.equals("MJMMiller")) {
+                        accesoAdministrativo();
+                        accesoCorrecto = true;
 
-            } else {
-                System.out.println("Acceso denegado. Usuario o contraseña incorrectos.");
-                System.out.println("---------------------------------------------");
+                    } else if (username.equals("nicolascedillo@gmail.com") && password.equals("nicolas1")) {
+                        accesoEmpleado();
+                        accesoCorrecto = true;
+
+                    } else {
+                        System.out.println("Acceso denegado. Usuario o contraseña incorrectos.");
+                        System.out.println("---------------------------------------------");
+                    }
+                    break;
+
+                case "2":
+                    System.out.println("Saliendo del programa...");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opción inválida. Por favor, intente nuevamente.");
+                    System.out.println("---------------------------------------------");
             }
         }
     }
@@ -130,14 +149,15 @@ public class ViewConsole {
                         cambiarEstadoSolicitud();
                         break;
                     case 14:
+                        System.out.println("Regresando al login...");
+                        login();
                         continuar = false;
-                        System.out.println("Saliendo del sistema...");
                         break;
                     default:
                         System.out.println("Opción inválida. Por favor, intente nuevamente.");
                 }
             }
-        }else {
+        } else {
             while (continuar) {
                 int opcion = menuEmpleado();
                 switch (opcion) {
@@ -175,8 +195,9 @@ public class ViewConsole {
                         buscarSolicitudPorEstado();
                         break;
                     case 12:
+                        System.out.println("Regresando al login...");
+                        login();
                         continuar = false;
-                        System.out.println("Saliendo del sistema...");
                         break;
                     default:
                         System.out.println("Opción inválida. Por favor, intente nuevamente.");
