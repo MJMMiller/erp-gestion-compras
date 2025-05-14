@@ -1,6 +1,6 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
-import ec.edu.ups.poo.Models.Interface.Calculable;
+import ec.edu.ups.poo.models.Interface.Calculable;
 
 import java.util.Objects;
 

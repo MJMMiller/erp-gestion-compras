@@ -1,7 +1,7 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
-import ec.edu.ups.poo.Models.Enums.EstadoSolicitud;
-import ec.edu.ups.poo.Models.Interface.Calculable;
+import ec.edu.ups.poo.models.Enums.EstadoSolicitud;
+import ec.edu.ups.poo.models.Interface.Calculable;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class SolicitudCompra implements Calculable {
     private String comentario;
     private Empleado empleadoSolicitante;
     private EstadoSolicitud estado;
-    private List<DetalleSolicitud> detalles = new ArrayList<>();
+    private List<DetalleSolicitud> detalles;
     private double subTotal;
     private double iva;
     private double total;
@@ -27,6 +27,7 @@ public class SolicitudCompra implements Calculable {
         this.comentario = comentario;
         this.empleadoSolicitante = empleadoSolicitante;
         this.estado = estado;
+        detalles = new ArrayList<>();
     }
 
     public double getTotal() {

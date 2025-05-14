@@ -1,6 +1,6 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
-import ec.edu.ups.poo.Models.Enums.Rol;
+import ec.edu.ups.poo.models.Enums.Rol;
 
 public class Empleado extends Persona{
 

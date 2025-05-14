@@ -1,11 +1,11 @@
-package ec.edu.ups.poo.Views;
+package ec.edu.ups.poo.views;
 
-import ec.edu.ups.poo.Controllers.ControlProducto;
-import ec.edu.ups.poo.Controllers.ControlProvedor;
-import ec.edu.ups.poo.Controllers.ControlSolicitud;
-import ec.edu.ups.poo.Models.Departamento;
-import ec.edu.ups.poo.Models.Empleado;
-import ec.edu.ups.poo.Models.Enums.Rol;
+import ec.edu.ups.poo.controllers.ControlProducto;
+import ec.edu.ups.poo.controllers.ControlProvedor;
+import ec.edu.ups.poo.controllers.ControlSolicitud;
+import ec.edu.ups.poo.models.Departamento;
+import ec.edu.ups.poo.models.Empleado;
+import ec.edu.ups.poo.models.Enums.Rol;
 import java.util.Scanner;
 
 public class ViewConsole {

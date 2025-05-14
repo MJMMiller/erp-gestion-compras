@@ -1,6 +1,6 @@
 package ec.edu.ups.poo;
 
-import ec.edu.ups.poo.Views.ViewConsole;
+import ec.edu.ups.poo.views.ViewConsole;
 
 public class Main {
     public static void main(String[] args) {

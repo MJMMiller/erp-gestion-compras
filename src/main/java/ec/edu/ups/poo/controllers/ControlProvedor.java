@@ -1,10 +1,10 @@
-package ec.edu.ups.poo.Controllers;
+package ec.edu.ups.poo.controllers;
 
-import ec.edu.ups.poo.Models.Enums.Feriado;
-import ec.edu.ups.poo.Models.Producto;
-import ec.edu.ups.poo.Models.ProductoConIva;
-import ec.edu.ups.poo.Models.ProductoSinIva;
-import ec.edu.ups.poo.Models.Provedor;
+import ec.edu.ups.poo.models.Enums.Feriado;
+import ec.edu.ups.poo.models.Producto;
+import ec.edu.ups.poo.models.ProductoConIva;
+import ec.edu.ups.poo.models.ProductoSinIva;
+import ec.edu.ups.poo.models.Provedor;
 
 import java.util.ArrayList;
 import java.util.List;

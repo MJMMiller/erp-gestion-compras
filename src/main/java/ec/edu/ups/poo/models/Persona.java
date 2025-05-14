@@ -1,4 +1,4 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
 public class Persona {
 

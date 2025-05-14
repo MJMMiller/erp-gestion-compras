@@ -1,4 +1,4 @@
-package ec.edu.ups.poo.Models.Enums;
+package ec.edu.ups.poo.models.Enums;
 
  import java.time.Month;
 

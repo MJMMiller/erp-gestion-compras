@@ -1,6 +1,6 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
-import ec.edu.ups.poo.Models.Enums.Feriado;
+import ec.edu.ups.poo.models.Enums.Feriado;
 
 public class ProductoConIva extends Producto {
     private Feriado festividad;
@@ -29,7 +29,7 @@ public class ProductoConIva extends Producto {
     }
 
     @Override
-    double calcularIVA() {
+    public double calcularIVA() {
         return getPrecioUnitario()*festividad.getPorcentaje() ;
     }
 }

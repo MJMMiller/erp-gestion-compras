@@ -1,6 +1,4 @@
-package ec.edu.ups.poo.Models;
-
-import ec.edu.ups.poo.Models.Enums.Feriado;
+package ec.edu.ups.poo.models;
 
 public class ProductoSinIva extends  Producto {
     private String motivo;
@@ -26,4 +24,9 @@ public class ProductoSinIva extends  Producto {
                 " || motivo='" + motivo + '\''+ " ||"+
                 "\n\t\t\t\t\t\t----------------------------------------------------------------------------------------------------------";
     }
+
+    public double calcularIVA() {
+        return 0;
+    }
+
 }

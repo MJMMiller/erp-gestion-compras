@@ -1,4 +1,4 @@
-package ec.edu.ups.poo.Models;
+package ec.edu.ups.poo.models;
 
 import java.util.Objects;
 
@@ -8,7 +8,6 @@ public abstract class  Producto {
     private String nombre;
     private Double precioUnitario;
     private String marca;
-
 
     public Producto(int id, String nombre, Double precioUnitario, String marca) {
         this.id = id;
@@ -67,7 +66,5 @@ public abstract class  Producto {
         return Objects.hashCode(id);
     }
 
-    double calcularIVA() {
-        return 0;
-    }
+    public abstract double calcularIVA();
 }
