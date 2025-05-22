@@ -61,7 +61,7 @@ ec.edu.ups.poo/
 ---
 
 ## 🗂️ Diagrama
-![](https://raw.githubusercontent.com/MJMMiller/POO_DIAGRAMS/refs/heads/main/TrabajoColaborativo.jpg)
+![](https://raw.githubusercontent.com/MJMMiller/POO_DIAGRAMS/3d2a3e0dcc3c2e596c68f3c8d57c10c3424005f2/erp-gestion-compras.jpg)
 
 ---
 ## 🚀 Ejecución
